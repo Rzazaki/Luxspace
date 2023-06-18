@@ -24,6 +24,7 @@ class ProductController extends Controller
             ->addColumn('action', function($item)
             {
                 return '
+                    <a href="'. route('dashboard.product.gallery.index', $item->id). '" class="bg-blue-500 rounded-md text-white px-2 py-1 m-2" title="Edit"><i class="fa fa-edit"></i>Gallery</a>
                     <a href="'. route('dashboard.product.edit', $item->id). '" class="bg-gray-500 rounded-md text-white px-2 py-1 m-2" title="Edit"><i class="fa fa-edit"></i>Edit</a>
                     <form class="inline-block" action="' . route('dashboard.product.destroy', $item->id) . '" method="POST">
                         <button class="bg-red-500 rounded-md text-white px-2 py-1 m-2">Delete</button>
